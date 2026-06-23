@@ -1,117 +1,247 @@
-{
-  "updatedAt": "2026-06-23",
-  "grants": [
-    {
-      "name": "Community Foundation for Southeast Michigan - Community Impact Grants",
-      "tier": "Michigan",
-      "size": "Not stated publicly",
-      "deadline": "Proposal request due July 15, 2026; invited full application due August 26, 2026.",
-      "dueFlag": "Due within 30 days",
-      "eligible": "Nonprofit, government/public agency, school district, university, or likely eligible fiscal sponsor. EMAN should use a school board or 501(c)(3)/fiscal partner until charter-board eligibility is confirmed.",
-      "why": "Strong regional Detroit/Southeast Michigan fit for literacy, youth education, ELL/immigrant family supports, and college/career readiness.",
-      "requirements": "MyCF account; short proposal request; if invited, full application with narrative, budget, legal applicant details, service geography, outcomes, financials, and partner documents.",
-      "verdict": "Pursue",
-      "materiality": "Unknown award size, but strategically useful regional relationship; fee-base treatment unclear.",
-      "effort": "Medium",
-      "odds": "Medium",
-      "status": "Active; due within 30 days.",
-      "nextStep": "Prepare one concise regional concept and confirm applicant vehicle before July 15.",
-      "source": "https://cfsem.org/grants-endowment/apply-community-impact-grants/"
-    },
-    {
-      "name": "W.K. Kellogg Foundation - Rolling LOI",
-      "tier": "Michigan / National",
-      "size": "Not stated publicly; proposal-specific and potentially material.",
-      "deadline": "Rolling; LOIs accepted year-round.",
-      "dueFlag": "Rolling",
-      "eligible": "Generally nonprofit applicant through WKKF Fluxx. EMAN should use a 501(c)(3)/fiscal partner or school-support nonprofit structure; direct EMAN eligibility should not be assumed.",
-      "why": "Michigan geography and child/family/equity orientation fit immigrant-family student success, literacy, and family engagement concepts.",
-      "requirements": "Fluxx registration; LOI; if encouraged, proposal with outcomes, budget, governance/legal documents, community voice, and equity rationale.",
-      "verdict": "Pursue",
-      "materiality": "Potentially material and renewable, but relationship/program fit must be validated.",
-      "effort": "Medium-High",
-      "odds": "Low-Medium",
-      "status": "Relationship cultivation / concept development.",
-      "nextStep": "Draft a two-page LOI concept around immigrant-family student success or early literacy plus family engagement.",
-      "source": "https://www.wkkf.org/grantseekers/"
-    },
-    {
-      "name": "Ralph C. Wilson, Jr. Foundation - Foundation Grants",
-      "tier": "Michigan",
-      "size": "Not stated publicly; proposal-specific.",
-      "deadline": "Rolling; applications accepted year-round.",
-      "dueFlag": "Rolling",
-      "eligible": "Nonprofit organizations impacting Southeast Michigan counties; fiscal intermediary may be used for non-tax-exempt programs. EMAN should pursue through a 501(c)(3), fiscal sponsor, or eligible school-support partner.",
-      "why": "Strong for afterschool, career readiness, communication, teamwork, critical-thinking skills, and regional youth support in Wayne/Oakland/Macomb.",
-      "requirements": "Fluxx registration, LOI, budget, audited financials/annual report/board list, invited full proposal, and evaluation plan.",
-      "verdict": "Pursue",
-      "materiality": "Potentially material if structured as multi-school youth-success infrastructure; fee-base treatment unclear.",
-      "effort": "Medium-High",
-      "odds": "Medium",
-      "status": "Relationship/pipeline priority; rolling.",
-      "nextStep": "Develop a partner-led LOI for multi-school afterschool or career-readiness infrastructure.",
-      "source": "https://www.ralphcwilsonjrfoundation.org/foundation-grants/"
-    },
-    {
-      "name": "NewSchools Venture Fund - Innovative Schools / Education Innovation Funding",
-      "tier": "National",
-      "size": "$150,000-$250,000 one-year unrestricted grants.",
-      "deadline": "2026 window closed; monitor next cycle.",
-      "dueFlag": "No 30-day deadline",
-      "eligible": "Early-stage education leaders, entrepreneurs, new initiatives within existing organizations, and new innovative public school teams. EMAN should apply through a school founder/board/new-school entity, not as management partner alone.",
-      "why": "Very strong for growth-enabling charter startup/replication, K-8 reading/math, learning differences, and innovative school design.",
-      "requirements": "Eligibility form/application portal; narrative on idea, alignment, community engagement, team, growth potential, impact model, and school design/launch plan.",
-      "verdict": "Pursue",
-      "materiality": "Material; unrestricted $150k-$250k plus expert support could fund planning/launch capacity.",
-      "effort": "High",
-      "odds": "Low-Medium",
-      "status": "Closed for 2026; build 2027 pipeline.",
-      "nextStep": "Build a reusable new-school or replication concept deck and monitor next window.",
-      "source": "https://www.newschools.org/apply-for-funding/"
-    },
-    {
-      "name": "Walton Family Foundation - Public Charter Startup Grants",
-      "tier": "National",
-      "size": "Current public page does not state amount; historically material, current amount must be confirmed.",
-      "deadline": "Opportunity survey/contact pathway active; no standard open deadline shown.",
-      "dueFlag": "Relationship-gated",
-      "eligible": "Public charter school developers/schools meeting startup criteria. Applicant should be the charter school/founding board or appropriate nonprofit vehicle; EMAN should support, not present as owner.",
-      "why": "Direct charter-school startup fit requiring clear reading/math goals, student-achievement targets, progress monitoring, and school quality evidence.",
-      "requirements": "Opportunity survey or relationship pathway; startup plan, academic goals, governance, leadership, budget, launch timeline, and performance evidence.",
-      "verdict": "Pursue",
-      "materiality": "Potentially material and highly strategic for growth, but relationship/access is the gating factor.",
-      "effort": "High",
-      "odds": "Low",
-      "status": "Cultivate / confirm current pathway.",
-      "nextStep": "Submit or refresh opportunity survey and prepare charter-startup diligence package.",
-      "source": "https://www.waltonfamilyfoundation.org/grants/public-charter-startup-grants/student-achievement-goals"
-    }
-  ],
-  "landscape": [
-    {
-      "segment": "Regional community foundations",
-      "materiality": "Real but mixed materiality",
-      "evidence": "CFSEM Community Impact and Youth Leadership provide near-term local routes; grants may be modest or amount-undisclosed.",
-      "implication": "Best near-term channel for credibility and local relationship-building. Good for literacy, youth leadership, family engagement, and transition supports."
-    },
-    {
-      "segment": "Michigan relationship funders",
-      "materiality": "Potentially material but relationship-gated",
-      "evidence": "W.K. Kellogg, Skillman, and Ralph C. Wilson Jr. fit regional youth and education priorities but reward relationship development.",
-      "implication": "High strategic value; requires relationship cultivation and a polished POV by end of week."
-    },
-    {
-      "segment": "National charter-growth philanthropy",
-      "materiality": "Most material segment",
-      "evidence": "NewSchools offers $150k-$250k unrestricted grants; Walton directly supports public charter startup quality, but access is competitive/gated.",
-      "implication": "Pursue as a pipeline, not daily microgrant chasing. Build startup/replication collateral now."
-    }
-  ],
-  "sources": [
-    ["CFSEM Community Impact Grants", "https://cfsem.org/grants-endowment/apply-community-impact-grants/"],
-    ["W.K. Kellogg Foundation Grantseekers", "https://www.wkkf.org/grantseekers/"],
-    ["Ralph C. Wilson, Jr. Foundation Grants", "https://www.ralphcwilsonjrfoundation.org/foundation-grants/"],
-    ["NewSchools Apply for Funding", "https://www.newschools.org/apply-for-funding/"],
-    ["Walton Public Charter Startup Grants", "https://www.waltonfamilyfoundation.org/grants/public-charter-startup-grants/student-achievement-goals"]
-  ]
+let grants = [];
+let landscapeRows = [];
+let sources = [];
+let activeVerdict = "All";
+let activeDeadline = "All";
+let searchTerm = "";
+let selectedName = "";
+
+function clean(value) {
+  return String(value ?? "").trim();
 }
+
+function normalize(value) {
+  return clean(value).toLowerCase();
+}
+
+function escapeHtml(value) {
+  return clean(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function verdictClass(verdict) {
+  return normalize(verdict).replace(/[^a-z0-9]+/g, "-") || "maybe";
+}
+
+function displayDate(value) {
+  const date = value ? new Date(`${value}T12:00:00`) : new Date();
+  if (Number.isNaN(date.valueOf())) return clean(value) || "Unknown";
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+}
+
+function updateSyncStatus(message, state = "") {
+  const el = document.getElementById("syncStatus");
+  if (!el) return;
+  el.textContent = message;
+  el.dataset.state = state;
+}
+
+function matchesSearch(grant) {
+  if (!searchTerm) return true;
+  return [
+    grant.name,
+    grant.tier,
+    grant.size,
+    grant.deadline,
+    grant.eligible,
+    grant.why,
+    grant.requirements,
+    grant.verdict,
+    grant.status,
+    grant.nextStep,
+  ]
+    .map(normalize)
+    .join(" ")
+    .includes(normalize(searchTerm));
+}
+
+function verdictRank(verdict) {
+  return { Pursue: 0, Maybe: 1, Skip: 2 }[verdict] ?? 3;
+}
+
+function filteredGrants() {
+  return [...grants]
+    .sort((a, b) => verdictRank(a.verdict) - verdictRank(b.verdict) || clean(a.name).localeCompare(clean(b.name)))
+    .filter((grant) => {
+      const verdictMatch = activeVerdict === "All" || grant.verdict === activeVerdict;
+      const deadlineMatch = activeDeadline === "All" || grant.dueFlag === activeDeadline;
+      return verdictMatch && deadlineMatch && matchesSearch(grant);
+    });
+}
+
+function renderMetrics() {
+  const metrics = [
+    ["Tracked", grants.length],
+    ["Pursue", grants.filter((g) => g.verdict === "Pursue").length],
+    ["Within 30 days", grants.filter((g) => clean(g.dueFlag).includes("30") || clean(g.dueFlag).includes("14")).length],
+    ["Material pipeline", grants.filter((g) => normalize(g.materiality).includes("material") || normalize(g.size).includes("$100")).length],
+  ];
+
+  document.getElementById("metrics").innerHTML = metrics
+    .map(
+      ([label, value]) => `
+        <div class="metric">
+          <span>${escapeHtml(label)}</span>
+          <strong>${escapeHtml(value)}</strong>
+        </div>
+      `,
+    )
+    .join("");
+}
+
+function renderFilters() {
+  const verdicts = ["All", "Pursue", "Maybe", "Skip"];
+  const deadlines = ["All", ...Array.from(new Set(grants.map((g) => g.dueFlag).filter(Boolean)))];
+
+  document.getElementById("verdictFilters").innerHTML = verdicts
+    .map((verdict) => `<button class="chip ${activeVerdict === verdict ? "active" : ""}" data-filter="verdict" data-value="${escapeHtml(verdict)}">${escapeHtml(verdict)}</button>`)
+    .join("");
+
+  document.getElementById("deadlineFilters").innerHTML = deadlines
+    .map((deadline) => `<button class="chip ${activeDeadline === deadline ? "active" : ""}" data-filter="deadline" data-value="${escapeHtml(deadline)}">${escapeHtml(deadline)}</button>`)
+    .join("");
+}
+
+function renderRows() {
+  const rows = filteredGrants();
+  const tbody = document.getElementById("grantRows");
+  document.getElementById("resultCount").textContent = `${rows.length} of ${grants.length} shown`;
+
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td class="empty" colspan="6">No grants match the current filters.</td></tr>`;
+    renderDetail(null);
+    return;
+  }
+
+  if (!rows.some((grant) => grant.name === selectedName)) selectedName = rows[0].name;
+
+  tbody.innerHTML = rows
+    .map(
+      (grant) => `
+        <tr class="${grant.name === selectedName ? "selected" : ""}" data-name="${escapeHtml(grant.name)}">
+          <td><span class="grant-name">${escapeHtml(grant.name)}</span><span class="tier">${escapeHtml(grant.tier)}</span></td>
+          <td>${escapeHtml(grant.size)}</td>
+          <td>${escapeHtml(grant.deadline)}<span class="deadline-flag">${escapeHtml(grant.dueFlag)}</span></td>
+          <td>${escapeHtml(grant.why)}</td>
+          <td>${escapeHtml(grant.requirements)}</td>
+          <td><span class="verdict ${verdictClass(grant.verdict)}">${escapeHtml(grant.verdict)}</span></td>
+        </tr>
+      `,
+    )
+    .join("");
+
+  renderDetail(grants.find((grant) => grant.name === selectedName));
+}
+
+function renderDetail(grant) {
+  const detail = document.getElementById("detail");
+  if (!grant) {
+    detail.innerHTML = `<p class="empty">Select a row to inspect the opportunity.</p>`;
+    return;
+  }
+
+  const sourceLink = grant.source
+    ? `<a class="source-link" href="${escapeHtml(grant.source)}" target="_blank" rel="noreferrer">Open source</a>`
+    : "";
+
+  detail.innerHTML = `
+    <h2>${escapeHtml(grant.name)}</h2>
+    <span class="verdict ${verdictClass(grant.verdict)}">${escapeHtml(grant.verdict)}</span>
+    <div class="detail-grid">
+      <div class="detail-item"><span>Eligible applicant</span><p>${escapeHtml(grant.eligible)}</p></div>
+      <div class="detail-item"><span>Materiality</span><p>${escapeHtml(grant.materiality)}</p></div>
+      <div class="detail-item"><span>Effort / odds</span><p>${escapeHtml(grant.effort)}; ${escapeHtml(grant.odds)}</p></div>
+      <div class="detail-item"><span>Status</span><p>${escapeHtml(grant.status)}</p></div>
+      <div class="detail-item"><span>Next step</span><p>${escapeHtml(grant.nextStep)}</p></div>
+    </div>
+    ${sourceLink}
+  `;
+}
+
+function renderLandscape() {
+  document.getElementById("landscape").innerHTML = landscapeRows.length
+    ? landscapeRows
+        .map(
+          (row) => `
+            <article class="landscape-row">
+              <h3>${escapeHtml(row.segment)}</h3>
+              <p><strong>${escapeHtml(row.materiality)}</strong></p>
+              <p>${escapeHtml(row.evidence)}</p>
+              <p>${escapeHtml(row.implication)}</p>
+            </article>
+          `,
+        )
+        .join("")
+    : `<p class="empty">No landscape rows have been added yet.</p>`;
+}
+
+function renderSources() {
+  document.getElementById("sources").innerHTML = sources.length
+    ? sources
+        .map(([name, url]) => `<article class="source-item"><h3>${escapeHtml(name)}</h3><p>Primary source used in the dashboard.</p><a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(url)}</a></article>`)
+        .join("")
+    : `<article class="source-item"><h3>No source links listed</h3><p>Sources will appear after the next grant scan updates data.json.</p></article>`;
+}
+
+function render(updatedAt) {
+  const runDate = document.getElementById("runDate");
+  if (runDate) runDate.textContent = displayDate(updatedAt);
+  renderMetrics();
+  renderFilters();
+  renderRows();
+  renderLandscape();
+  renderSources();
+}
+
+async function loadDashboardData() {
+  updateSyncStatus("Loading repo data...", "loading");
+  try {
+    const response = await fetch(`./data.json?ts=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`data.json returned ${response.status}`);
+    const data = await response.json();
+    grants = Array.isArray(data.grants) ? data.grants : [];
+    landscapeRows = Array.isArray(data.landscape) ? data.landscape : [];
+    sources = Array.isArray(data.sources) ? data.sources : [];
+    selectedName = grants[0]?.name || "";
+    render(data.updatedAt);
+    updateSyncStatus(`Loaded from data.json · ${new Date().toLocaleString()}`, "ok");
+  } catch (error) {
+    console.error(error);
+    grants = [];
+    landscapeRows = [];
+    sources = [];
+    render();
+    updateSyncStatus("Could not load data.json", "error");
+  }
+}
+
+document.addEventListener("click", (event) => {
+  const chip = event.target.closest(".chip");
+  if (chip) {
+    if (chip.dataset.filter === "verdict") activeVerdict = chip.dataset.value;
+    if (chip.dataset.filter === "deadline") activeDeadline = chip.dataset.value;
+    render();
+    return;
+  }
+
+  const row = event.target.closest("tbody tr[data-name]");
+  if (row) {
+    selectedName = row.dataset.name;
+    renderRows();
+  }
+});
+
+document.getElementById("search").addEventListener("input", (event) => {
+  searchTerm = event.target.value;
+  renderRows();
+});
+
+loadDashboardData();
