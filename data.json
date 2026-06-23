@@ -1,5 +1,6 @@
 {
   "updatedAt": "2026-06-23",
+  "automationTestedAt": "2026-06-23T20:00:00Z",
   "grants": [
     {
       "name": "Community Foundation for Southeast Michigan - Community Impact Grants",
@@ -14,7 +15,7 @@
       "materiality": "Unknown award size, but strategically useful regional relationship; fee-base treatment unclear.",
       "effort": "Medium",
       "odds": "Medium",
-      "status": "Active; due within 30 days.",
+      "status": "Active; due within 30 days. Automation write test completed from agent.",
       "nextStep": "Prepare one concise regional concept and confirm applicant vehicle before July 15.",
       "source": "https://cfsem.org/grants-endowment/apply-community-impact-grants/"
     },
