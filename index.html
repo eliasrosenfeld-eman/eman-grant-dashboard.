@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EMAN Philanthropic Grant Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">EMAN Grant Research</p>
+          <h1>Philanthropic Grant Dashboard</h1>
+        </div>
+        <div class="run-meta">
+          <span>Run date</span>
+          <strong>June 22, 2026</strong>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-grid" aria-label="Grant summary">
+          <div class="summary-panel pov-panel">
+            <p class="panel-label">Preliminary EOW POV</p>
+            <h2>Material ROI exists in selective growth philanthropy, not broad microgrant chasing.</h2>
+            <p>
+              The highest-value lane is charter growth, regional relationship funders, and multi-year STEM/literacy concepts. 
+              Campus microgrants are useful only when templated and delegated.
+            </p>
+          </div>
+          <div class="metric-strip" id="metrics"></div>
+        </section>
+
+        <section class="workspace" aria-label="Grant workspace">
+          <aside class="filters" aria-label="Filters">
+            <div class="filter-block">
+              <label for="search">Search</label>
+              <input id="search" type="search" placeholder="Grant, funder, focus, requirement..." />
+            </div>
+            <div class="filter-block">
+              <span class="filter-label">ROI verdict</span>
+              <div class="chip-group" id="verdictFilters"></div>
+            </div>
+            <div class="filter-block">
+              <span class="filter-label">Deadline pressure</span>
+              <div class="chip-group" id="deadlineFilters"></div>
+            </div>
+            <div class="filter-block">
+              <span class="filter-label">Recommended next moves</span>
+              <ol class="action-list">
+                <li>Submit a CFSEM proposal request by July 15.</li>
+                <li>Draft WKKF and Skillman concept notes around immigrant-family student success.</li>
+                <li>Build NewSchools/Walton startup-growth collateral for the material ROI lane.</li>
+                <li>Template campus microgrants so central team does not chase one-offs.</li>
+              </ol>
+            </div>
+          </aside>
+
+          <section class="grant-table-zone">
+            <div class="section-heading">
+              <div>
+                <p class="panel-label">Grant dashboard</p>
+                <h2>Decision-ready opportunities</h2>
+              </div>
+              <span id="resultCount" class="result-count"></span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name of org / grant</th>
+                    <th>Size</th>
+                    <th>Deadline</th>
+                    <th>Why EMAN is a high-quality candidate</th>
+                    <th>Application requirements</th>
+                    <th>Verdict</th>
+                  </tr>
+                </thead>
+                <tbody id="grantRows"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <aside class="detail-pane" aria-label="Selected opportunity">
+            <p class="panel-label">Selected opportunity</p>
+            <div id="detail"></div>
+          </aside>
+        </section>
+
+        <section class="landscape-section" aria-label="Landscape research">
+          <div class="section-heading">
+            <div>
+              <p class="panel-label">Landscape research</p>
+              <h2>Segment POV for the end-of-week decision</h2>
+            </div>
+          </div>
+          <div class="landscape-list" id="landscape"></div>
+        </section>
+
+        <section class="sources-section" aria-label="Sources">
+          <div class="section-heading">
+            <div>
+              <p class="panel-label">Sources</p>
+              <h2>Primary source links</h2>
+            </div>
+          </div>
+          <div class="sources-list" id="sources"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
