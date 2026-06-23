@@ -111,6 +111,22 @@ h3 {
   font-size: 0.95rem;
 }
 
+.run-meta em {
+  max-width: 280px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-style: normal;
+  line-height: 1.3;
+}
+
+.run-meta em[data-state="ok"] {
+  color: var(--green);
+}
+
+.run-meta em[data-state="error"] {
+  color: var(--red);
+}
+
 main {
   display: grid;
   gap: 22px;

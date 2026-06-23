@@ -1,4 +1,4 @@
-const grants = [
+let grants = [
   {
     name: "Community Foundation for Southeast Michigan - Community Impact Grants",
     tier: "Michigan",
@@ -222,7 +222,7 @@ const grants = [
   },
 ];
 
-const landscapeRows = [
+let landscapeRows = [
   {
     segment: "Regional community foundations",
     materiality: "Real but mixed materiality",
@@ -261,7 +261,7 @@ const landscapeRows = [
   },
 ];
 
-const sources = [
+let sources = [
   ["CFSEM Community Impact Grants", "https://cfsem.org/grants-endowment/apply-community-impact-grants/"],
   ["CFSEM Youth Leadership", "https://cfsem.org/special-opportunities/youth-leadership/"],
   ["W.K. Kellogg Foundation Grantseekers", "https://www.wkkf.org/grantseekers/"],
@@ -281,13 +281,6 @@ let activeVerdict = "All";
 let activeDeadline = "All";
 let searchTerm = "";
 let selectedName = grants[0].name;
-
-const metrics = [
-  ["Tracked", grants.length],
-  ["Pursue", grants.filter((g) => g.verdict === "Pursue").length],
-  ["Within 30 days", grants.filter((g) => g.dueFlag.includes("30")).length],
-  ["Material pipeline", grants.filter((g) => g.materiality.toLowerCase().includes("material")).length],
-];
 
 function normalize(value) {
   return String(value).toLowerCase();
@@ -325,6 +318,13 @@ function verdictClass(verdict) {
 }
 
 function renderMetrics() {
+  const metrics = [
+    ["Tracked", grants.length],
+    ["Pursue", grants.filter((g) => g.verdict === "Pursue").length],
+    ["Within 30 days", grants.filter((g) => g.dueFlag && g.dueFlag.includes("30")).length],
+    ["Material pipeline", grants.filter((g) => (g.materiality || "").toLowerCase().includes("material")).length],
+  ];
+
   document.getElementById("metrics").innerHTML = metrics
     .map(
       ([label, value]) => `
@@ -448,6 +448,168 @@ function render() {
   renderSources();
 }
 
+const SHEET_ID = "1DfqXnxxWob3mybL2DZnMO1QpF7aWbWrWGatiZTLsZ_Y";
+const SHEET_TABS = ["Grants", "Landscape", "Sources"];
+
+const fieldMap = {
+  name: ["name", "name of org / grant", "org / grant", "org grant", "grant", "funder / org"],
+  tier: ["tier", "tier (mi/national)"],
+  size: ["size", "size of grant", "amount", "amount (school value)", "grant size"],
+  deadline: ["deadline"],
+  dueFlag: ["due flag", "deadline pressure", "urgency"],
+  eligible: ["eligible", "eligible applicant", "eligible applicant / structure", "applicant"],
+  why: ["why eman is a high-quality candidate", "why eman", "fit w/ niche", "fit with eman", "eman fit"],
+  requirements: ["application requirements", "requirements"],
+  verdict: ["verdict", "roi verdict"],
+  materiality: ["materiality", "school value", "est. eman value (~12%)"],
+  effort: ["effort", "est. effort"],
+  odds: ["success odds", "probability of success", "odds"],
+  status: ["status"],
+  nextStep: ["next step", "recommended next step", "action"],
+  source: ["source", "source url", "primary-source url", "url"],
+};
+
+function normalizeHeader(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
+}
+
+function pick(row, key, fallback = "") {
+  const names = fieldMap[key] || [key];
+  for (const name of names) {
+    if (row[name] !== undefined && row[name] !== null && String(row[name]).trim() !== "") {
+      return String(row[name]).trim();
+    }
+  }
+  return fallback;
+}
+
+function gvizToRows(response) {
+  const table = response && response.table;
+  if (!table || !Array.isArray(table.cols) || !Array.isArray(table.rows)) return [];
+  const headers = table.cols.map((col, index) => normalizeHeader(col.label || col.id || `col${index}`));
+  return table.rows
+    .map((row) => {
+      const record = {};
+      headers.forEach((header, index) => {
+        const cell = row.c[index];
+        record[header] = cell ? cell.f ?? cell.v ?? "" : "";
+      });
+      return record;
+    })
+    .filter((row) => Object.values(row).some((value) => String(value).trim() !== ""));
+}
+
+function mapGrants(rows) {
+  return rows
+    .map((row) => ({
+      name: pick(row, "name"),
+      tier: pick(row, "tier", "Unspecified"),
+      size: pick(row, "size", "Not stated"),
+      deadline: pick(row, "deadline", "Not stated"),
+      dueFlag: pick(row, "dueFlag", "No 30-day deadline"),
+      eligible: pick(row, "eligible", "Eligibility not yet confirmed"),
+      why: pick(row, "why", "Fit rationale not yet added"),
+      requirements: pick(row, "requirements", "Requirements not yet added"),
+      verdict: pick(row, "verdict", "Maybe"),
+      materiality: pick(row, "materiality", "Materiality not yet assessed"),
+      effort: pick(row, "effort", "Not assessed"),
+      odds: pick(row, "odds", "Not assessed"),
+      status: pick(row, "status", "Tracked"),
+      nextStep: pick(row, "nextStep", "Add next step"),
+      source: pick(row, "source", "#"),
+    }))
+    .filter((grant) => grant.name);
+}
+
+function mapLandscape(rows) {
+  return rows
+    .map((row) => ({
+      segment: row.segment || row["landscape segment"] || row["market segment"] || "",
+      materiality: row.materiality || row["market size / materiality"] || row["market size"] || "",
+      evidence: row.evidence || row["what's available"] || row["what’s available"] || "",
+      implication: row.implication || row["eman implication"] || row["pov for eow"] || row.conclusion || "",
+    }))
+    .filter((row) => row.segment);
+}
+
+function mapSources(rows) {
+  return rows
+    .map((row) => [
+      row.source || row.name || row["source name"] || row["funder / org"] || "Source",
+      row.url || row["source url"] || row.link || row["primary-source url"] || "#",
+    ])
+    .filter((row) => row[0] && row[1]);
+}
+
+function loadSheetTab(sheetName) {
+  return new Promise((resolve, reject) => {
+    const callbackName = `sheetCallback_${sheetName}_${Date.now()}`.replace(/\W/g, "_");
+    const script = document.createElement("script");
+    const timeout = window.setTimeout(() => {
+      cleanup();
+      reject(new Error(`Timed out loading ${sheetName}`));
+    }, 12000);
+
+    function cleanup() {
+      window.clearTimeout(timeout);
+      delete window[callbackName];
+      script.remove();
+    }
+
+    window[callbackName] = (response) => {
+      cleanup();
+      resolve(gvizToRows(response));
+    };
+
+    script.onerror = () => {
+      cleanup();
+      reject(new Error(`Could not load ${sheetName}`));
+    };
+
+    const params = new URLSearchParams({
+      sheet: sheetName,
+      tqx: `responseHandler:${callbackName}`,
+      tq: "select *",
+    });
+    script.src = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?${params.toString()}`;
+    document.head.appendChild(script);
+  });
+}
+
+function updateSyncStatus(message, state = "") {
+  const el = document.getElementById("syncStatus");
+  if (!el) return;
+  el.textContent = message;
+  el.dataset.state = state;
+}
+
+async function loadLiveSheetData() {
+  updateSyncStatus("Loading Google Sheet data...", "loading");
+  try {
+    const [grantRows, landscapeSheetRows, sourceRows] = await Promise.all(SHEET_TABS.map(loadSheetTab));
+    const liveGrants = mapGrants(grantRows);
+    if (liveGrants.length) {
+      grants = liveGrants;
+      selectedName = grants[0].name;
+    }
+
+    const liveLandscape = mapLandscape(landscapeSheetRows);
+    if (liveLandscape.length) landscapeRows = liveLandscape;
+
+    const liveSources = mapSources(sourceRows);
+    if (liveSources.length) sources = liveSources;
+
+    render();
+    updateSyncStatus(`Loaded from Google Sheet · ${new Date().toLocaleString()}`, "ok");
+  } catch (error) {
+    console.warn(error);
+    updateSyncStatus("Using fallback data. Publish/share the Google Sheet if live rows do not load.", "error");
+  }
+}
+
 document.addEventListener("click", (event) => {
   const chip = event.target.closest(".chip");
   if (chip) {
@@ -470,3 +632,4 @@ document.getElementById("search").addEventListener("input", (event) => {
 });
 
 render();
+loadLiveSheetData();
